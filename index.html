@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Case Converter Pro - The ultimate modern SaaS tool for converting text cases instantly. Optimize your workflow with 1-click auto-copy and prefix formatting.">
+    <title>Case Converter Pro | Advanced Text Case Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Subtle animated background gradient -->
+    <div class="bg-gradient-anim"></div>
+
+    <header class="navbar fade-in-up">
+        <div class="container nav-content center-content">
+            <div class="brand" id="brand-logo"><span id="brand-w1">Case Converter</span> <span id="brand-w2"
+                    class="text-gradient">Pro</span></div>
+        </div>
+    </header>
+
+    <main class="container layout-grid">
+
+        <div class="main-column">
+
+            <section class="hero fade-in-up" style="animation-delay: 0.1s;">
+                <h1 class="headline-gradient">Transform Your Text instantly.</h1>
+                <p class="subtitle">The fastest way to convert text cases, optimize your workflow, and format titles
+                    seamlessly.</p>
+            </section>
+
+            <section class="tool-card fade-in-up" style="animation-delay: 0.2s;">
+                <!-- Global Controls -->
+                <div class="global-controls controls-bar">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="auto-copy-toggle" checked>
+                        <span class="slider"></span>
+                        <span class="toggle-label">Auto Copy</span>
+                    </label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="auto-clear-toggle">
+                        <span class="slider"></span>
+                        <span class="toggle-label">Auto Clear</span>
+                    </label>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-target="mode1">Multi Case Converter</button>
+                    <button class="tab-btn" data-target="mode2">Title Case with Prefix</button>
+                </div>
+
+                <!-- Mode 1: Multi Case Converter -->
+                <div id="mode1" class="tab-content active">
+
+                    <textarea id="text-input-1" placeholder="Type or paste your text here..."></textarea>
+
+                    <div class="action-grid">
+                        <button class="action-btn" data-action="uppercase">Uppercase</button>
+                        <button class="action-btn" data-action="lowercase">Lowercase</button>
+                        <button class="action-btn" data-action="sentencecase">Sentence case</button>
+                        <button class="action-btn" data-action="titlecase">Title case</button>
+                        <button class="action-btn" data-action="togglecase">Toggle case</button>
+                        <button class="action-btn" data-action="camelcase">camelCase</button>
+                        <button class="action-btn" data-action="snakecase">snake_case</button>
+                        <button class="action-btn" data-action="kebabcase">kebab-case</button>
+                        <button class="action-btn" data-action="reversecase">Reverse case</button>
+                    </div>
+
+                    <div class="preview-section hidden" id="preview-section-1">
+                        <h3>Live Preview
+                            <button class="copy-icon-btn" id="copy-preview-btn" title="Copy to clipboard">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="preview-box" id="live-preview-1"></div>
+                    </div>
+
+                    <div class="history-section">
+                        <h4>Recent Conversions</h4>
+                        <ul id="history-list" class="history-list">
+                            <li class="history-empty">No recent conversions (Last 5)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mode 2: Title Case with Prefix -->
+                <div id="mode2" class="tab-content">
+
+                    <div class="prefix-grid">
+                        <button class="prefix-btn" data-prefix="Mr.">Mr.</button>
+                        <button class="prefix-btn" data-prefix="Ms.">Ms.</button>
+                        <button class="prefix-btn" data-prefix="Mrs.">Mrs.</button>
+                        <button class="prefix-btn" data-prefix="Dr.">Dr.</button>
+                        <button class="prefix-btn" data-prefix="Prof.">Prof.</button>
+                        <button class="prefix-btn" data-prefix="Sir">Sir</button>
+                        <button class="prefix-btn" data-prefix="Madam">Madam</button>
+                    </div>
+
+                    <input type="text" id="name-input" class="name-input" placeholder="Enter name (e.g., john doe)">
+
+                    <button class="action-btn primary-btn w-full mt-4" id="generate-prefix-btn">
+                        Format & Copy
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- SEO Content -->
+            <section class="seo-content fade-in-up mt-12">
+                <h2>What is Case Conversion?</h2>
+                <p>Case conversion is the process of changing the capitalization of text to fit a specific format or
+                    standard. Whether you need to format titles for blog posts, convert variables for coding, or fix
+                    accidentally capitalized sentences, a reliable case converter saves you time and ensures
+                    consistency.</p>
+
+
+                <h2>Why Auto Copy Saves Time</h2>
+                <p>In a fast-paced digital environment, every click counts. Our Auto Copy feature eliminates the need to
+                    manually highlight and copy the converted text. The moment you click a conversion button, the result
+                    is instantly copied to your clipboard, streamlining your workflow into a single, efficient action.
+                </p>
+
+                <h2>Benefits of Lest-Click Workflow</h2>
+                <p>Case Converter Pro is designed around the philosophy of minimal friction. By combining formatting,
+                    copying, and clearing into single actions (especially in our Prefix Mode), we reduce repetitive
+                    strain and allow you to process hundreds of names or titles in a fraction of the time compared to
+                    traditional tools.</p>
+
+                <h2>Prefix Formatting Explained</h2>
+                <p>Adding titles like Mr., Dr., or Prof. to lists of names can be tedious. Our dedicated Prefix Mode not
+                    only automatically Title Cases the name you input but smartly prepends your chosen title. It then
+                    copies the result and clears the input field, readying the tool for your next entry instantly.</p>
+
+                <h2>Use Cases</h2>
+                <ul class="use-case-list">
+                    <li><strong>Students & Writers:</strong> Quickly format essay titles, citations, and headings.</li>
+                    <li><strong>Developers:</strong> Instantly convert variables to `camelCase`, `snake_case`, or
+                        `kebab-case`.</li>
+                    <li><strong>Data Entry & HR:</strong> Process long lists of employee or customer names with accurate
+                        prefix formatting.</li>
+                    <li><strong>Social Media Managers:</strong> Fix messy text and ensure brand consistency across
+                        posts.</li>
+                </ul>
+
+                <h2 class="mt-8">Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Is Case Converter Pro free to use?</h3>
+                        <p class="faq-answer">Yes, our tool is 100% free to use with no hidden limits or registrations
+                            required.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">What does Toggle Case do?</h3>
+                        <p class="faq-answer">Toggle Case reverses the capitalization of every single letter. Uppercase
+                            letters become lowercase, and vice versa. It's often used to fix text typed with Caps Lock
+                            accidentally turned on.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Does it store my text?</h3>
+                        <p class="faq-answer">No. All conversions happen entirely in your browser. We do not transmit or
+                            store your text on our servers. Your Case History is stored locally on your device for your
+                            convenience.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">How does Title Case work?</h3>
+                        <p class="faq-answer">Title Case capitalizes the first letter of most words, while keeping minor
+                            words (like 'a', 'the', 'in') lowercase unless they are the first word, adhering to standard
+                            publishing guidelines.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Does the Auto Copy work on mobile?</h3>
+                        <p class="faq-answer">Yes! Auto Copy fully supports modern mobile browsers, seamlessly copying
+                            the result to your clipboard on iOS and Android devices.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Case Converter Pro. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="sitemap.html">Sitemap</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Smart "Copied" Toast -->
+    <div id="toast" class="toast">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span id="toast-msg">Copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
