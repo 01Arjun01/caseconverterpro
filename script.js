@@ -1,4 +1,4 @@
-// ===== Dynamic SEO Based on URL (All Tools) =====
+// ===== Dynamic SEO Per URL =====
 (function () {
   const path = window.location.pathname;
 
@@ -6,97 +6,74 @@
     "/": {
       title: "Case Converter Pro | Advanced Text Case Converter",
       description:
-        "Convert text cases instantly with Case Converter Pro. Use auto copy, auto clear, and title case with prefix to speed up your workflow."
+        "Convert text cases instantly with Case Converter Pro. Fast, clean, and optimized workflow with auto copy and prefix formatting."
     },
 
-    // Main case pages
     "/uppercase-converter/": {
       title: "Uppercase Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Convert text to UPPERCASE instantly. Fast uppercase converter with auto copy and clean UI on Case Converter Pro."
+        "Convert text to UPPERCASE instantly. Free online uppercase converter with auto copy and clean interface."
     },
+
     "/lowercase-converter/": {
       title: "Lowercase Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Convert text to lowercase instantly. Simple, fast lowercase converter with auto copy on Case Converter Pro."
+        "Convert text to lowercase instantly. Fast and simple lowercase converter with auto copy support."
     },
+
     "/sentence-case-converter/": {
       title: "Sentence Case Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Convert text to sentence case in one click. Fix capitalization quickly with Case Converter Pro."
+        "Convert text to sentence case in one click. Fix capitalization quickly and easily."
     },
+
     "/title-case-converter/": {
       title: "Title Case Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Convert text to Title Case instantly. Perfect for headings and titles with auto copy on Case Converter Pro."
+        "Convert text to Title Case instantly. Perfect for blog titles, headings, and formatted content."
     },
-    "/toggle-case-converter/": {
-      title: "Toggle Case Converter – Free Online Tool | Case Converter Pro",
-      description:
-        "Toggle case instantly (swap upper/lower letters). Quick toggle case converter with auto copy on Case Converter Pro."
-    },
+
     "/camelcase-converter/": {
       title: "camelCase Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Convert text to camelCase instantly. Great for developers and variable naming with Case Converter Pro."
+        "Convert text to camelCase instantly. Ideal for developers and coding variable formatting."
     },
+
     "/snake-case-converter/": {
       title: "snake_case Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Convert text to snake_case instantly. Clean formatting for code and identifiers with Case Converter Pro."
+        "Convert text to snake_case instantly. Perfect for coding and structured text formatting."
     },
+
     "/kebab-case-converter/": {
       title: "kebab-case Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Convert text to kebab-case instantly. Ideal for URLs and slugs with Case Converter Pro."
+        "Convert text to kebab-case instantly. Great for URLs and slugs."
     },
+
     "/reverse-case-converter/": {
       title: "Reverse Case Converter – Free Online Tool | Case Converter Pro",
       description:
-        "Reverse the case of your text instantly. Quick reverse case converter with auto copy on Case Converter Pro."
+        "Reverse the case of your text instantly. Swap uppercase and lowercase letters with one click."
     },
 
-    // Prefix tool (from your second screenshot)
     "/title-case-with-prefix/": {
       title: "Title Case with Prefix – Format & Copy | Case Converter Pro",
       description:
-        "Format names in Title Case with prefixes like Mr., Ms., Mrs., Dr., Prof., Sir, Madam. One click format & copy with Case Converter Pro."
-    },
-
-    // Category / misc URLs Google discovered
-    "/text-tools/": {
-      title: "Text Tools – Case Converter Pro",
-      description:
-        "Explore text tools on Case Converter Pro including case conversion, formatting, and productivity features."
-    },
-    "/random-generators/": {
-      title: "Random Generators – Case Converter Pro",
-      description:
-        "Random generator tools on Case Converter Pro. Simple utilities built for speed and productivity."
-    },
-    "/image-tools/": {
-      title: "Tools – Case Converter Pro",
-      description:
-        "Browse tools on Case Converter Pro. Fast utilities designed to save time with a clean workflow."
+        "Format names with prefixes like Mr., Ms., Dr., Prof., Sir, Madam using Title Case and copy instantly."
     }
   };
 
-  // Apply SEO for matching routes
-  const cfg = seoConfig[path] || seoConfig["/"];
-  document.title = cfg.title;
+  const config = seoConfig[path] || seoConfig["/"];
+
+  document.title = config.title;
 
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute("content", cfg.description);
-
-  // Optional: set canonical to avoid duplicate SEO issues
-  let canonical = document.querySelector('link[rel="canonical"]');
-  if (!canonical) {
-    canonical = document.createElement("link");
-    canonical.setAttribute("rel", "canonical");
-    document.head.appendChild(canonical);
+  if (metaDesc) {
+    metaDesc.setAttribute("content", config.description);
   }
-  canonical.setAttribute("href", `https://caseconverterpro.com${path}`);
 })();
+
 // State Management
 const state = {
     autoCopy: true,
@@ -480,4 +457,5 @@ function initCookieBanner() {
 
 // Boot up
 document.addEventListener('DOMContentLoaded', init);
+
 
