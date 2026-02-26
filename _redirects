@@ -1,1 +1,11 @@
-/*    /index.html   200
+/uppercase-converter/ /index.html 200
+/lowercase-converter/ /index.html 200
+/sentence-case-converter/ /index.html 200
+/title-case-converter/ /index.html 200
+/camelcase-converter/ /index.html 200
+/snake-case-converter/ /index.html 200
+/kebab-case-converter/ /index.html 200
+/reverse-case-converter/ /index.html 200
+/title-case-with-prefix/ /index.html 200
+
+/* /404.html 404
